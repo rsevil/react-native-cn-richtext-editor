@@ -8,6 +8,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
+    "@astrocoders/react-native-selectable-text": "git+https://github.com/rsevil/react-native-selectable-text-input.git",
     "diff-match-patch": "^1.0.4",
     "immutability-helper": "^2.8.1",
     "lodash": "^4.17.15",

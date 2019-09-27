@@ -4,6 +4,7 @@ import _ from 'lodash';
 import update from 'immutability-helper';
 import DiffMatchPatch from 'diff-match-patch';
 import CNStyledText from './CNStyledText';
+import { SelectableText } from "react-native-selectable-text";
 
 const shortid = require('shortid');
 
@@ -1313,7 +1314,7 @@ class CNTextInput extends Component {
       const fontSize =styleList && styleList.body && styleList.body.fontSize ? styleList.body.fontSize : 20;
       
       return (
-        <TextInput
+        <SelectableText
           underlineColorAndroid="rgba(0,0,0,0)"
           onSelectionChange={this.onSelectionChange}
           multiline
@@ -1336,14 +1337,16 @@ class CNTextInput extends Component {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onContentSizeChange={this.handleContentSizeChange}
-		      placeholder={this.props.placeholder}
+          placeholder={this.props.placeholder}
+          menuItems={this.props.menuItems}
+          onSelection={this.props.onSelection}
         >
           {
               _.map(items, item => (
                 <CNStyledText key={item.id} style={item.styleList} text={item.text} />
               ))
             }
-        </TextInput>
+        </SelectableText>
       );
     }
 
