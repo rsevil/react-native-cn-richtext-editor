@@ -4,7 +4,7 @@ import _ from 'lodash';
 import update from 'immutability-helper';
 import DiffMatchPatch from 'diff-match-patch';
 import CNStyledText from './CNStyledText';
-import { SelectableText } from "react-native-selectable-text";
+import { SelectableText } from "@astrocoders/react-native-selectable-text";
 
 const shortid = require('shortid');
 
